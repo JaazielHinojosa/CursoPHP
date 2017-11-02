@@ -16,12 +16,16 @@ echo '<h1 style="text-align: center">Class Car</h1>';
 echo 'Class Car <br>';
 $car = new Car('Pablo');
 $car->move();
-echo 'Propietario carro: ' . $car->getOwner() . '<br>';
+//echo 'Propietario carro: ' . $car->getOwner() . '<br>';
 
 echo '<br>Class Truck <br>';
-$truck = new Truck('Axel', 'Pickup');
-$truck->move();
-echo 'Propietario de la camioneta: ' . $truck->getOwner();
+$truck1 = new Truck('Axel', 'Pickup');
+$truck1->move();
+//echo 'Propietario de la camioneta: ' . $truck->getOwner();
 
+echo '<br>Class Truck <br>';
+$truck2 = new Truck('Max', 'Pickup');
+$truck2->move();
+echo '<br> Total Trucks: ' .Truck::getTotal() . '<br>';
 
 include '../../views/down.html';
