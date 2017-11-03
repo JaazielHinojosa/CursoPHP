@@ -2,7 +2,7 @@
 
 namespace Vehicles;
 
-class VehicleBase
+abstract class VehicleBase
 {
     protected $owner;
 
@@ -14,6 +14,7 @@ class VehicleBase
     }
 
     public function move(){
+        echo $this->startEngine() . '<br>';
         echo 'Moviendo coche <br>';
     }
 
@@ -24,4 +25,6 @@ class VehicleBase
     public function setOwner($owner){
         $this->owner = $owner;
     }
+
+    public abstract function startEngine();
 }

@@ -16,11 +16,12 @@ class Truck extends VehicleBase
         self::$count++;
     }
 
-    public function move(){
-        echo 'Truck : Moviendo ' . $this->type . '<br>';
-    }
-
     public static function getTotal(){
         return self::$count;
+    }
+
+    public function startEngine()
+    {
+        return 'Truck: start engine';
     }
 }
