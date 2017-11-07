@@ -8,8 +8,9 @@ include '../../views/up.html';
 
 include 'vehicles/Car.php';
 include 'vehicles/Truck.php';
+include 'vehicles/ToyCar.php';
 
-use Vehicles\{Car, Truck}; //apartir de php 7
+use Vehicles\{Car, Truck, ToyCar}; //apartir de php 7
 
 //interfaces
 //interface MyInterface {
@@ -22,6 +23,16 @@ echo 'Class Car <br>';
 $car = new Car('Pablo');
 $car->move();
 //echo 'Propietario carro: ' . $car->getOwner() . '<br>';
+
+try {
+    echo 'Class ToyCar <br>';
+    $toycar = new ToyCar('Pablo');
+    $toycar->move();
+} catch (Exception $e){
+    echo 'Este es un juguete. <br><br>';
+} finally { // el finally se ejecuta se use o no la exception
+    echo 'Finally <br><br>';
+}
 
 echo '<br>Class Truck <br>';
 $truck1 = new Truck('Axel', 'Pickup');
