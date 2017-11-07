@@ -22,6 +22,7 @@ echo '<h1 style="text-align: center">Class Car</h1>';
 echo 'Class Car <br>';
 $car = new Car('Pablo');
 $car->move();
+echo 'GPS position: ' . $car->getPos();
 //echo 'Propietario carro: ' . $car->getOwner() . '<br>';
 
 try {
