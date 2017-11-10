@@ -20,15 +20,17 @@ $queryResult = $pdo->query("SELECT * FROM users");
         <tr>
             <th>Nombre</th>
             <th>Correo</th>
-            <th>Edit</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
         </tr>
         <?php
         while ($row = $queryResult->fetch(PDO::FETCH_ASSOC)) {
             echo '<tr>';
             echo '<td>' .$row['name'] . '</td>';
             echo '<td>' .$row['email'] . '</td>';
-            echo  '<td><a href="update.php?id=' .$row['id'] . '"><button type="button" class="btn btn-primary">Actualizar</button></a></td>';
-            echo '<tr>';
+            echo '<td><a href="update.php?id=' .$row['id'] . '"><button type="button" class="btn btn-primary">Actualizar</button></a></td>';
+            echo '<td><a href="delete.php?id=' .$row['id'] . '"><button type="button" class="btn btn-danger">Eliminar</button></a></td>';
+            echo '</tr>';
         }
         ?>
     </table>
