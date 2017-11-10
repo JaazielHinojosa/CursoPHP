@@ -9,7 +9,7 @@
             <h1>Bases de Datos</h1>
 
             <ul>
-                <li><a href="">Mostrar usuarios</a></li>
+                <li><a href="list.php">Mostrar usuarios</a></li>
                 <li><a href="add.php">Agregar usuarios</a></li>
             </ul>
         </div>
