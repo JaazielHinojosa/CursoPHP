@@ -2,7 +2,7 @@
 
 require_once 'config.php';
 
-$result = false;
+$result = true;
 
 if (!empty($_POST)){
     $name = $_POST['name'];
