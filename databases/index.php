@@ -11,6 +11,7 @@
             <ul>
                 <li><a href="add.php">Agregar usuarios</a></li>
                 <li><a href="list.php">Mostrar usuarios</a></li>
+                <li><a href="fake-login.php">Falso Login</a></li>
             </ul>
         </div>
     </body>
